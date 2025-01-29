@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  max-width: 80%;
+  max-height: 100vh;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto
+}
+
+.data {
+  width: 400px;
+  border: solid 1px rgb(255,0,0);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.detallehide {
+  display: none;
+}
+
+.detalle {
+  width: 400px;
+  border: solid 1px rgb(255,0,0);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.containerNT {
+  width: 400px;
+  border: solid 1px rgb(255,0,0);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.containerNTD {
+  display: none
+}
+
+h2, h1 {
+  text-align: center;
+}
+
+.containerTareas {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 8px;
+}
+
+.botonesRadio {
+  margin-left: 10px;
+}
+
+.labelBR {
+  margin-left: 15px;
+}
+
+.botonera {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  column-gap: 8px;
+  margin-bottom: 10px;
+}
+
+.estiloBoton{
+  width: 100px;
+  height: 30px;
+  border-radius: 8%;
+  border-color: rgb(0,0,0);
+  cursor: pointer;
+}
+
+.estiloBoton:hover{
+  background-color: darkblue;
+}
+
+.estiloBotonD{
+  width: 100px;
+  height: 30px;
+  border-radius: 8%;
+  border-color: rgb(0,0,0);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 150px auto;
+  gap: 8px;
+  padding-left: 10px;
+}
+
+.botonEstado {
+  margin: 10px;
+}
+
+.itemP {
+  text-align:justify;
+}
+
+.nuevaTarea {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.tablaForm {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 8px;
+}
