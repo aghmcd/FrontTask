@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-
+import { taskService } from './Services/tasks/taskService'
+import Tareas from './Components/Tareas/Tareas'
 
 function App() {
   const dbMongo = async() => {
@@ -50,14 +51,12 @@ function App() {
         setTareas(dataFiltrada)
     }
 
-    const fetchData = async () => {
-      const taskAPI = await dbMongo()
-      setTaskAPI(taskAPI)
-    }
+    taskService.getAllTask().then((response) => {
+      console.log(response)
+      setAllTask(response)
+    })
 
-    fetchData();
-
-  },[filtro, allTask])
+  },[filtro])
 
   const Tabla = ({task}) => {
     
@@ -295,7 +294,8 @@ function App() {
      <div className='container'>
       <div className='data'>
         <h1>Bienvenido a mi Página</h1>
-        <Tabla task={tareas}/>
+        {/* <Tabla task={tareas}/> */}
+        <Tareas tasks = {allTask}/>
       </div>
       <div className={detalle ? 'detalle' : 'detallehide' }>
         <Detalle miTarea={miTarea}/>

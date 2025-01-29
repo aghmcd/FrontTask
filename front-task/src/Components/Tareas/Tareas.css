@@ -1,0 +1,42 @@
+.contenedorP {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 8px;
+}
+.titulo1 {
+    
+}
+
+.itemsT {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 4px;
+    justify-content: center;
+}
+
+.item{
+    border: solid 1px rgb(255,255,255);
+    border-radius: 5px;
+}
+
+.itemC {
+    display: none;
+}
+
+.camposT {
+    padding-top: 5px;
+}
+.contenidoT {
+    margin: 0 0 0 6px;
+}
+
+.contenedorBotones {
+    justify-self: center;
+    margin-bottom: 10px;
+}
+
+.butonNuevaTarea {
+    height: 40px;
+    width: 130px;
+    
+}
