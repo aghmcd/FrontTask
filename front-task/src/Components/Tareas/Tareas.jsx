@@ -30,25 +30,28 @@ const Tareas = ({ tasks }) => {
             <h1 className='titulo1'>Tareas por hacer</h1>
             <div className='itemsT'>
                 {tasks.map((item) => (
-                    <div key={item._id} className={item.progreso !== 'Cerrado' ? 'item' : 'itemC'}>
+                    <div key={item._id}
+                        className={item.progreso !== 'cerrado' 
+                            ? item.progreso === 'sin iniciar' ? 'itemR' : 'itemG'
+                            : 'itemC'}>
                         <span >
                             <strong className='camposT'>Tarea:</strong>
                             <p className='contenidoT'>{item.tarea}</p>
                             <strong className='camposT'>Prioridad: </strong>
                             <p className='contenidoT'>{item.prioridad}</p>
-                            <strong className='camposT'>Estado: </strong>
+                            {/* <strong className='camposT'>Estado: </strong>
                             <p className='contenidoT'>{item.progreso}</p>
                             <strong className='camposT'>Fecha de Inicio: </strong>
-                            <p className='contenidoT'>{item.fechaInicio}</p>
+                            <p className='contenidoT'>{item.fechaInicio}</p> */}
                             <button onClick={(e) => {
                                 e.preventDefault()
                                 onHanddleDetail(item._id)
-                            }}>Notas</button><button>Estado</button>
+                            }}>Detalle</button><button>Estado</button>
                         </span> 
                     </div>  
                 ))}
             </div>
-            <div>
+            <div className='detalleDeshabilitado'>
                 <DetalleTarea tareaD={tareaDetalle} />
             </div> 
          </div>

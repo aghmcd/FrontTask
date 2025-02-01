@@ -9,13 +9,14 @@
 .itemsT {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 4px;
+    gap: 8px;
     justify-content: center;
     grid-auto-rows: 1fr;
 }
 
-.item{
+.itemR{
     border: solid 1px rgb(255,255,255);
+    background-color: rgba(255,255,0,0.2);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -23,6 +24,20 @@
     height: 100%;
     text-align: left;
     margin: 5px;
+    padding-left: 8px;
+}
+
+.itemG{
+    border: solid 1px rgb(255,255,255);
+    background-color: rgba(0,255,0,0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: left;
+    margin: 5px;
+    padding-left: 8px;
 }
 
 .itemC {
@@ -36,6 +51,10 @@
     margin: 0 0 0 6px;
 }
 .compTarea {
+    display: none;
+}
+
+.detalleDeshabilitado {
     display: none;
 }
 

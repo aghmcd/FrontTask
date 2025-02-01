@@ -12,16 +12,31 @@ const DetalleTarea = ({ tareaD }) => {
                <p>Notas:</p>
                <ol>
                 {tareaD.notas && tareaD.notas.length > 0 ? (
-                    tareaD.notas.map((subArray, index) => (
-                        subArray.map((nota, subIndex) => (
-                            <li key={`${index}-${subIndex}`}>
+                    tareaD.notas.map((aUno) => (
+                        aUno.map((nota) => (
+                            <li key={nota._id}>
                                 <p>Nota: {nota.nota}</p>
-                                <p>Fecha: {nota.fecha_nota}</p>
+                                <p>Fecha: {nota.fecha_nota.split("T")[0]}</p>
                             </li>
                         ))
                     ))
                 ) : (
-                    <p>No hay notas disponibles.</p>
+                    <p>No hay notas para esta tarea</p>
+                )}
+            </ol>
+            <p>Comentarios:</p>
+            <ol>
+                {tareaD.comentarios && tareaD.comentarios.length > 0 ? (
+                    tareaD.comentarios.map((aUno)=> (
+                        aUno.map((coment) => (
+                            <li key={coment._id}>
+                                <p>Comentario: {coment.comentario}</p>
+                                <p>Fecha: {coment.fecha_coment.split("T")[0]}</p>
+                            </li>
+                        ))
+                    ))
+                ) : (
+                    <p>No hay comentarios para esta tarea</p>
                 )}
             </ol>
             </div>        

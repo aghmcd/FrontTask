@@ -47,6 +47,7 @@ const NuevaTarea = ({onGuardarTarea}) => {
                   name="tarea"
                   value={form.tarea}
                   onChange={onHandleChange}
+                  maxLength={57}
                   required
                 />
                 <label htmlFor="fechai">Fecha Inicio:</label>
