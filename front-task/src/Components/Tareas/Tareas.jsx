@@ -32,7 +32,7 @@ const Tareas = ({ tasks }) => {
                 {tasks.map((item) => (
                     <div key={item._id}
                         className={item.progreso !== 'cerrado' 
-                            ? item.progreso === 'sin iniciar' ? 'itemR' : 'itemG'
+                            ? item.progreso === 'sin iniciar' ? 'itemG' : 'itemA'
                             : 'itemC'}>
                         <span >
                             <strong className='camposT'>Tarea:</strong>
