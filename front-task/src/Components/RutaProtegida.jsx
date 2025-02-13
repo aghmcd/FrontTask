@@ -5,7 +5,6 @@ const RutaProtegida = (prop) => {
   const { children } = prop
 
   const { isAuthenticated } = useAuth();
-  console.log(isAuthenticated)
   return isAuthenticated ? children : <Navigate to="/" />;
 };
 

@@ -15,7 +15,7 @@ export const AuthProvider = (prop) => {
   
   const login = () => {
     setIsAuthenticated(true);
-    //localStorage.setItem('autenticado', JSON.stringify(true));
+    localStorage.setItem('autenticado', JSON.stringify(true));
   }
   const logout = () => {
     setIsAuthenticated(false);
