@@ -7,6 +7,7 @@ import { AuthProvider } from './Components/AuthContext'
 import  RutaProtegida  from './Components/RutaProtegida'
 import Menu from './Components/Menu/Menu'
 import CrearPerfil from './Components/Profile/CrearPerfil'
+import Docs from './Components/Docs/Docs'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
           <Routes>
             <Route path='/' element={<LoginForm />} />
             <Route path='/new_profile' element={<CrearPerfil />}/>
-            <Route path='/menu' element={<RutaProtegida><Menu /></RutaProtegida>} />
+            <Route path='/menu' element={<RutaProtegida><Docs /></RutaProtegida>} />
           </Routes>
          </BrowserRouter>
         </AuthProvider>

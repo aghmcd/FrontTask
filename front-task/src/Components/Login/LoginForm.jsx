@@ -26,6 +26,8 @@ const LoginForm = () => {
             localStorage.setItem('emailU', respuesta.emailUsuario);
             localStorage.setItem('avatarU', respuesta.avatarUsuario);
             navigate('/Menu');
+        } else {
+            console.log(respuesta)
         }
     }
 

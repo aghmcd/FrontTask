@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { usuarioService } from "../../Services/Usuarios/usuarioService";
+import { useNavigate } from "react-router-dom";
 
 const CrearPerfil = () => {
 
@@ -10,7 +11,7 @@ const [profileForm, setProfileForm] = useState({
     contrasena: '',
     fechaNacimiento: '',
 });
-
+const navigate = useNavigate();
 const fileInputRef = useRef(null);
 const [avatar, setAvatar] = useState(null)
 
@@ -47,6 +48,9 @@ const onHandlesubmit = async (e) => {
     setAvatar(null)
     if (fileInputRef.current) {
         fileInputRef.current.value = null;
+    }
+    if(respuesta){
+        navigate('/');
     }
 }
 
